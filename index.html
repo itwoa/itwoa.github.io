@@ -16,9 +16,15 @@ title: Just Do it by Benny | git.itwoa.com
 　　　　{% endfor %}
 　　</ul>
 	{% highlight php %}
-	def foo
-	  puts 'foo'
-	end
+	//下载文件
+function download($url,$fileName){
+	ob_end_clean();
+	$file = file_get_contents($url);
+	header("Content-type: image/png");
+	header('content-disposition:attachment;filename='.$fileName);
+	header('content-length:'.strlen($file));
+	readfile($url);
+}
 	{% endhighlight %}
 	<footer class="site-footer">
         
