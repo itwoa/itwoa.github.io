@@ -29,7 +29,7 @@ function download($url,$fileName){
 }
 {% endhighlight %}
 {% for tag in site.tags %} 
-	<a>{{ tag[0] }}</a> 
+	<a>{{ tag[0] }}{{ tag[1]['title'] }}</a> 
 {% endfor %}
 {% for tag in site.tags %}
     {% assign count = tag | last | size %}
