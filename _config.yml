@@ -1,2 +1,3 @@
 theme: jekyll-theme-cayman
 baseurl: /itwoa.github.io
+paginate: 5
