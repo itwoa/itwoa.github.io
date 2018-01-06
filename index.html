@@ -30,7 +30,10 @@ function download($url,$fileName){
 {% endhighlight %}
 {% for tag in site.tags %}
 	<div>
-		<a>{{ tag[0] }}{{ tag[1]['title'] }}</a> 
+		<a>{{ tag[0] }}</a> 
+		{% for post in tag[1] limit:5 %}
+			<li>{{ post.date | date_to_string }} <a href="{{ post.url }}" target="_blank">{{ post.title }}</a></li>
+		{% endfor %}
 	</div>
 	
 {% endfor %}
