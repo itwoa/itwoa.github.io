@@ -2,7 +2,7 @@
 layout: default
 title: Just Do it by Benny | git.itwoa.com
 ---
-<section class="page-header">
+<section class="page-header" style="margin-top: -1.5rem">
     <h1 class="project-name">itwoa.github.io</h1>
     <h2 class="project-tagline"></h2>
     <a href="https://github.com/itwoa" class="btn">View on GitHub</a>
@@ -11,7 +11,7 @@ title: Just Do it by Benny | git.itwoa.com
 　　<h2>{{ page.title }}</h2>
 　　<p>最新文章</p>
 　　<ul>
-　　　　{% for post in site.posts limit:1 %}
+　　　　{% for post in site.posts limit:5 %}
 　　　　　　<li>{{ post.date | date_to_string }} <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
 　　　　{% endfor %}
 　　</ul>
