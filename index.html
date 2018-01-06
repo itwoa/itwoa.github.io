@@ -1,6 +1,6 @@
 ---
-　layout: default
-　title: 我的Blog
+layout: layout
+title: Blogging Like a Hacker
 ---
 	<section class="page-header">
       <h1 class="project-name">itwoa.github.io</h1>
@@ -14,7 +14,7 @@
 　　　　　　<li>{{ post.date | date_to_string }} <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
 　　　　{% endfor %}
 　　</ul>
-{% highlight ruby %}
+{% highlight php %}
 def foo
   puts 'foo'
 end
