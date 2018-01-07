@@ -7,7 +7,7 @@ tag: php
 ---
 {% for tag in site.tags %}
 	{% assign count = tag | last | size %}
-			
+			{% if page.tag  =  'php' %}  45454 {% endif %}
 			<div>
 				<a href="">{{ tag[0] }}</a>
 			<ul>
