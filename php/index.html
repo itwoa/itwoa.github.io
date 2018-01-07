@@ -8,13 +8,16 @@ tag: php
 {{ page.tag }}
 {% for tag in site.tags %}
 	{% assign count = tag | last | size %}
-	<div>
+
 		{% if page.tag  = tag[0] %}
-			{% for post in tag[1] limit:5 %}
+		<div>
+			<ul>
+				{% for post in tag[1] limit:5 %}
 				<li>{{ post.date | date_to_string }} <a href="{{ post.url }}" target="_blank">{{ post.title }}</a></li>
-			{% endfor %}
+				{% endfor %}
+			</ul>
+		</div>
+
 		{% endif %}
-	</div>
-	
 {% endfor %}
 
