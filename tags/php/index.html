@@ -16,7 +16,7 @@ tag: php
 {% for tag in site.tags %}
 	{% assign count = tag | last | size %}
 			{% if page.tag  ==  tag[0] %}
-			<h2>{{ page.tag}} （{{ count }}）</h2>
+			<h2>{{ page.tag}} {{ count }}</h2>
 			<div>
 				<ul>
 					{% for post in tag[1] %}
