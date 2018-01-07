@@ -10,11 +10,11 @@ tag: php
     <h2 class="project-tagline">PHP 是世界上最好的编程语言</h2>
 </section>
 <section class="main-content">
-	{% assign count = tag | last | size %}
-　　 <h2>{{ page.tag}} （{{ count }}）</h2>
+　　 
 {% for tag in site.tags %}
 	{% assign count = tag | last | size %}
 			{% if page.tag  ==  tag[0] %}
+			<h2>{{ page.tag}} （{{ count }}）</h2>
 			<div>
 				<ul>
 					{% for post in tag[1] %}
