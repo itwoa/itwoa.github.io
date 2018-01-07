@@ -31,7 +31,7 @@ function download($url,$fileName){
 {% for tag in site.tags %}
 	{% assign count = tag | last | size %}
 	<div>
-		<a href="/{{ tag[0] }}" target="_blank">{{ tag[0] }}（{{ count }}）</a>
+		<a href="/{{ tag[0] }}" target="_blank">{{ tag[0] }}（{{ count }}）</a> 
 		{% for post in tag[1] limit:5 %}
 			<li>{{ post.date | date_to_string }} <a href="{{ post.url }}" target="_blank">{{ post.title }}</a></li>
 		{% endfor %}
