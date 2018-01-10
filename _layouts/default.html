@@ -15,7 +15,7 @@
 　　<body>
 	<section class="page-header" style="margin-top: -1.5rem">
 	    <h1 class="project-name">{{ page.title }}</h1>
-	    <h2 class="project-tagline">{{ page.excerpt | strip_html | strip_newlines | truncate:100 }}</h2>
+	    <h2 class="project-tagline">{{ page.excerpt | strip_html | strip_newlines | truncate:50 }}</h2>
 	</section>
 	<section class="main-content">
 		<p>{{ page.date | date_to_string }}</p>
